@@ -7,7 +7,6 @@
             1.1.2 /api/shows?name=kyc 
             1.1.3 /api/shows?name=turnTheTable 
             ...
-            The data 
 
         1.2 /api/articles 
 
