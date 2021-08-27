@@ -1,5 +1,11 @@
 // initial code
+require('dotenv').config()
 const express = require('express');
+
+//Database connection
+const UthaanDB = require('./config/db.js')
+
+
 const api = require('./routes/api')
 
 const app = express();
