@@ -9,7 +9,7 @@ const UthaanDB = require('./config/db.js')
 const api = require('./routes/api')
 
 const app = express();
-const port = 80
+const port = 4000;
 
 //Route to fetch data
 app.use('/api', api)
