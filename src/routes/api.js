@@ -1,10 +1,10 @@
 //all apis
 const express = require("express");
 const router = express.Router();
-import { addEvent, getEvents } from "../controllers/events";
+const { addEvent, getEvents } = require("../controllers/events")
 
 //Redirect to events section
-router.post("/create", addEvent);
-router.get("/event", getEvents);
+router.post("/events", addEvent);
+router.get("/events", getEvents);
 
 module.exports = router;
