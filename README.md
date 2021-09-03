@@ -14,7 +14,7 @@
             1.3.1 /api/interviews?name=placekode 
             1.3.2 /api/interviews?name=others
 
-        1.4 /api/events 
+        1.4 /api/events [GET = To fetch events, POST = To create events]
 
 
     2./auth
