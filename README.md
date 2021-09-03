@@ -3,10 +3,13 @@
 ## Routes
     1./api 
         1.1 /api/shows 
-            1.1.1 /api/shows?name=beMyGuest 
-            1.1.2 /api/shows?name=kyc 
-            1.1.3 /api/shows?name=turnTheTable 
-            ...
+            GET - To fetch a show  
+                1.1.1 /api/shows?name=beMyGuest&season=1 
+                1.1.2 /api/shows?name=kyc&season=2 
+                1.1.3 /api/shows?name=turnTheTable&season=1 
+                ...
+            POST - To create a new show 
+                body : name,season,playlistId
 
         1.2 /api/articles 
 
@@ -14,7 +17,10 @@
             1.3.1 /api/interviews?name=placekode 
             1.3.2 /api/interviews?name=others
 
-        1.4 /api/events [GET = To fetch events, POST = To create events]
+        1.4 /api/events 
+            GET = To fetch events
+            POST = To create events
+            
 
 
     2./auth
