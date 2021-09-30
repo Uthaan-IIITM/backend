@@ -7,8 +7,6 @@ exports.getArticles = async(req, res) => {
         await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${process.env.UTHAAN_ARTICLES_URL}`)
             .then(res => res.json())
             .then(response => {
-                // console.log(response)
-                // console.log(response.items)
                 const articles = response.items.map(article => ({
                     'title': article.title,
                     'date': article.pubDate,
@@ -21,7 +19,6 @@ exports.getArticles = async(req, res) => {
             })
 
     } catch (err) {
-        // console.log(err)
         res.send({ status: 500, message: err.message })
     }
 }
