@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "babel-node app.js",
-    "type":"module",
+    "type": "module",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Thari Zephaniah",
@@ -14,6 +14,7 @@
     "@babel/core": "^7.15.0",
     "@babel/node": "^7.14.9",
     "@babel/preset-env": "^7.15.0",
+    "axios": "^0.21.4",
     "body-parser": "^1.19.0",
     "cjs-loader": "^0.1.0",
     "cloudinary": "^1.26.3",
@@ -24,6 +25,7 @@
     "modules": "^0.4.0",
     "mongoose": "^6.0.2",
     "node": "^16.6.1",
+    "node-fetch": "^2.0.0",
     "nodemon": "^2.0.12"
   }
 }
