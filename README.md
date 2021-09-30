@@ -14,8 +14,6 @@
         1.2 /api/articles 
 
         1.3 /api/interviews  
-            1.3.1 /api/interviews?name=placekode 
-            1.3.2 /api/interviews?name=others
 
         1.4 /api/events 
             GET = To fetch events
