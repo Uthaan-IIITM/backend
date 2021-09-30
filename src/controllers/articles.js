@@ -2,7 +2,6 @@ const fetch = require('node-fetch')
 
 exports.getArticles = async(req, res) => {
 
-    console.log("Requesting coming...")
     try {
         await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${process.env.UTHAAN_ARTICLES_URL}`)
             .then(res => res.json())
