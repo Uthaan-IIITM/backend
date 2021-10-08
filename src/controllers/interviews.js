@@ -9,10 +9,12 @@ exports.getInterviews = async(req, res) => {
                 const interviews = response.items.map(interview => ({
                     'title': interview.title,
                     'date': interview.pubDate,
+                    'dateInSeconds': new Date(interview.pubDate).getTime(),
                     'url': interview.link,
                     'author': interview.author,
                     'thumbnail': interview.thumbnail,
-                    'description': interview.description
+                    'description': interview.description,
+                    'tags': interview.categories,
                 }))
                 res.send({ status: 200, data: interviews })
             })
