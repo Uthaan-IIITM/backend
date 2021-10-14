@@ -6,6 +6,7 @@ const { getShow, addShow } = require("../controllers/shows")
 const { getArticles } = require('../controllers/articles')
 const { getInterviews } = require('../controllers/interviews')
 const { getTeams, addTeamMember, updateTeamMember } = require('../controllers/team')
+const { getMessages, sendMessage } = require('../controllers/messages')
 
 //Redirect to events section
 router
@@ -28,5 +29,10 @@ router
     .get("/teams", getTeams)
     .post("/teams", addTeamMember)
     .patch("/teams/:rollNumber", updateTeamMember)
+
+//Redirect to messages section
+router
+    .get("/messages", getMessages)
+    .post("/messages", sendMessage)
 
 module.exports = router;
