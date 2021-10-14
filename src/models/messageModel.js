@@ -24,6 +24,11 @@ const messageSchema = new Schema({
         type: Boolean,
         required: true,
         default: false
+    },
+    date: {
+        type: String,
+        required: true,
+        default: new Date().toLocaleString('en-IN')
     }
 });
 
