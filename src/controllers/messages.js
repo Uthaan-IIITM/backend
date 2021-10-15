@@ -10,9 +10,6 @@ exports.sendMessage = async(req, res) => {
     try {
         await Messages
             .create({...req.body, resolved: false })
-            .catch(err => {
-                res.send({ status: 401, message: err.message }).end()
-            })
 
         res.send({ status: 200, messages: "Message sent successfully" })
     } catch (err) {
