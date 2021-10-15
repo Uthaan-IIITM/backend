@@ -23,6 +23,13 @@ exports.addShow = async (req, res) => {
     return res.send({ status: 400, message: "Fields cannot be empty" });
   }
 
+  if (!Array.isArray(playlistIDs)) {
+    return res.send({
+      status: 400,
+      message: "playlistIDs must be of type Array",
+    });
+  }
+
   //Create an instance and save into database
   const newShow = new shows({
     name: name,
@@ -33,7 +40,7 @@ exports.addShow = async (req, res) => {
     newShow.save((err, result) => {
       if (err) {
         console.log(err);
-        res.send({ status: 500, message: err.message });
+        return res.send({ status: 500, message: err.message });
       }
       res.send({
         status: 200,
