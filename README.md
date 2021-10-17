@@ -22,6 +22,7 @@
         1.5 /api/images
             GET = To get all the images
             POST = To upload single or multiple images
+                body:formdata
             DELETE = To delete ALL images in the database
 
             1.5.1 /api/images/:imageId
