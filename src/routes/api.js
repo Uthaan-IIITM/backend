@@ -7,6 +7,7 @@ const { getArticles } = require('../controllers/articles')
 const { getInterviews } = require('../controllers/interviews')
 const { getTeams, addTeamMember, updateTeamMember } = require('../controllers/team')
 const { getMessages, sendMessage } = require('../controllers/messages')
+const { getImages, uploadImage, deleteAllImages, deleteImage } = require('../controllers/images')
 
 //Redirect to events section
 router
@@ -34,5 +35,13 @@ router
 router
     .get("/messages", getMessages)
     .post("/messages", sendMessage)
+
+//Redirect to images section
+router
+    .get("/images", getImages)
+    .post("/images", uploadImage)
+    .delete("/images", deleteAllImages)
+router
+    .delete("/images/:imageId", deleteImage)
 
 module.exports = router;
