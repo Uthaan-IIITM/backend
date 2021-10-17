@@ -1,10 +1,6 @@
-const DatauriParser = require('datauri/parser');
-const parser = new DatauriParser();
 const formidable = require('formidable')
 const cloudinary = require("../config/cloudinary")
 const Images = require('../models/imageModel')
-const fs = require('fs')
-
 
 /**
  * @description to get all the images in the database
@@ -36,7 +32,7 @@ exports.uploadImage = async(req, res) => {
                 res.send({ status: 401, error: error.message }).end();
             } else {
 
-                //Upload the image
+                //Upload the image in gallery folder 
                 for (let key in file) {
                     await cloudinary.uploader.upload(file[key].path, { folder: "gallery/", use_filename: true }, async(err, result) => {
 
