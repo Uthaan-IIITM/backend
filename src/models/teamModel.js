@@ -16,8 +16,7 @@ const teamsSchema = new Schema({
         required: true
     },
     statement: {
-        type: String,
-        required: true
+        type: String
     },
     links: {
         facebook: { type: String },
