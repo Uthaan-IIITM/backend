@@ -4,9 +4,9 @@ const teams = require('../models/teamModel')
 const getTeams = async(req, res) => {
 
     //Fetch the team members based on role
-    const founders = await teams.find({ role: 'founder' })
-    const alumni = await teams.find({ role: 'alumni' })
-    const executive = await teams.find({ role: 'executive' })
+    const founders = await teams.find({ role: 'Founder' })
+    const alumni = await teams.find({ role: 'Alumini' })
+    const executive = await teams.find({ role: 'Executive' })
 
     res.send({
         status: 200,
