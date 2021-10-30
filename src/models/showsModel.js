@@ -4,18 +4,14 @@ const Schema = mongoose.Schema;
 const model = mongoose.model;
 
 const showsSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    season: {
-        type: Number,
-        required: true
-    },
-    playlistId: {
-        type: String,
-        required: true
-    },
+  name: {
+    type: String,
+    required: true,
+  },
+  playlistIDs: {
+    type: Array,
+    required: true,
+  },
 });
 
 const shows = new model("show", showsSchema);

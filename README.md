@@ -14,16 +14,29 @@
         1.2 /api/articles 
 
         1.3 /api/interviews  
-            1.3.1 /api/interviews?name=placekode 
-            1.3.2 /api/interviews?name=others
 
         1.4 /api/events 
             GET = To fetch events
             POST = To create events
+        
+        1.5 /api/images
+            GET = To get all the images
+            POST = To upload single or multiple images
+                body:formdata
+            DELETE = To delete ALL images in the database
+
+            1.5.1 /api/images/:imageId
+                DELETE = To delete the image with given imageId
             
 
 
     2./auth
         2.1 /auth/login 
+            Method = POST
+                body = {email,password}
+        2.2 /auth/addAdmin
+            Method = POST
+                body = {email,password}
+                remarks : Only an existing admin can add a new admin
 
 

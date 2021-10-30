@@ -1,6 +1,6 @@
-const events = require("../models/eventModel.js")
+const events = require("../../models/eventModel.js")
 const formidable = require("formidable")
-const cloudinary = require("../config/cloudinary.js")
+const cloudinary = require("../../config/cloudinary.js")
 
 exports.addEvent = (req, res) => {
     try {
