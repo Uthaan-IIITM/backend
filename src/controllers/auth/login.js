@@ -33,7 +33,7 @@ exports.login = async(req, res) => {
     const token = jwt.sign({ email: user.email }, JWT_KEY)
 
     //Send the response 
-    res.send({
+    return res.send({
         status: 200,
         message: "Logged in successfully",
         token: token
