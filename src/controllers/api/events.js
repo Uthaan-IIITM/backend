@@ -11,10 +11,9 @@ exports.addEvent = (req, res) => {
                     error: "Error uploading file",
                 });
             } else {
-                console.log(fields, file);
 
                 cloudinary.uploader.upload(file.image.path, (err, result) => {
-                    console.log(err, result);
+
                     let event = new events();
                     event.name = fields.name;
                     event.description = fields.description;
@@ -38,13 +37,12 @@ exports.addEvent = (req, res) => {
 }
 
 exports.getEvents = async(req, res) => {
-    console.log(req)
+
     try {
         await events
             .find({})
             .sort({ _id: -1 })
             .then((result) => {
-                console.log(result);
                 res.status(200);
                 return res.send(result);
             })
