@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "babel-node app.js",
+    "start": "node app.js",
     "type": "module",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,6 +28,7 @@
     "mongoose": "^6.0.2",
     "node": "^16.6.1",
     "node-fetch": "^2.0.0",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "pm2": "^5.1.2"
   }
 }
