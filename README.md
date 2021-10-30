@@ -32,5 +32,11 @@
 
     2./auth
         2.1 /auth/login 
+            Method = POST
+                body = {email,password}
+        2.2 /auth/addAdmin
+            Method = POST
+                body = {email,password}
+                remarks : Only an existing admin can add a new admin
 
 
