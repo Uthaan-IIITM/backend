@@ -1,4 +1,4 @@
-const teams = require('../models/teamModel')
+const teams = require('../../models/teamModel')
 
 //fucntion to fetch all the team members
 const getTeams = async(req, res) => {

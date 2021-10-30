@@ -1,4 +1,4 @@
-const Messages = require('../models/messageModel')
+const Messages = require('../../models/messageModel')
 
 /**
  * @description to send message to Uthaan Club through the website

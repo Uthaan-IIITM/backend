@@ -1,13 +1,13 @@
 //all apis
 const express = require("express");
 const router = express.Router();
-const { addEvent, getEvents } = require("../controllers/events")
-const { getShow, addShow } = require("../controllers/shows")
-const { getArticles } = require('../controllers/articles')
-const { getInterviews } = require('../controllers/interviews')
-const { getTeams, addTeamMember, updateTeamMember } = require('../controllers/team')
-const { getMessages, sendMessage } = require('../controllers/messages')
-const { getImages, uploadImage, deleteAllImages, deleteImage } = require('../controllers/images')
+const { addEvent, getEvents } = require("../controllers/api/events")
+const { getShow, addShow } = require("../controllers/api/shows")
+const { getArticles } = require('../controllers/api/articles')
+const { getInterviews } = require('../controllers/api/interviews')
+const { getTeams, addTeamMember, updateTeamMember } = require('../controllers/api/team')
+const { getMessages, sendMessage } = require('../controllers/api/messages')
+const { getImages, uploadImage, deleteAllImages, deleteImage } = require('../controllers/api/images')
 
 //Redirect to events section
 router

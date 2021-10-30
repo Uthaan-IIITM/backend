@@ -1,6 +1,6 @@
 const formidable = require('formidable')
-const cloudinary = require("../config/cloudinary")
-const Images = require('../models/imageModel')
+const cloudinary = require("../../config/cloudinary")
+const Images = require('../../models/imageModel')
 
 /**
  * @description to get all the images in the database
