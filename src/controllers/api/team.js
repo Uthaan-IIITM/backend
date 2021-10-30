@@ -50,7 +50,7 @@ const addTeamMember = async(req, res) => {
 
 //function to update the details of a new team member
 const updateTeamMember = async(req, res) => {
-    console.log(req.body)
+
     await teams
         .findByIdAndUpdate(req.params.rollNumber, req.body)
         .catch(err => {
