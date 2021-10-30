@@ -19,7 +19,7 @@ const api = require("./src/routes/api");
 const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
-const port = 8080;
+const port = 4000;
 
 //Route to fetch data
 
@@ -29,12 +29,12 @@ app.use("/api", api);
 //Route for admin auth actions
 app.use("/auth", auth);
 
-// let httpsServer = https.createServer({
-//     key: fs.readFileSync('server-key.pem'),
-//     cert: fs.readFileSync('server-cert.pem')
-// },app);
+let httpsServer = https.createServer({
+    key: fs.readFileSync('server-key.pem'),
+    cert: fs.readFileSync('server-cert.pem')
+},app);
 
-// httpsServer.listen(8080);
-app.listen(process.env.PORT || port, () => {
-    console.log(`Server running at port ${port}`);
-});
+httpsServer.listen(8080);
+// app.listen(process.env.PORT || port, () => {
+//     console.log(`Server running at port ${port}`);
+// });
