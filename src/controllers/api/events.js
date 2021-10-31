@@ -17,6 +17,7 @@ exports.addEvent = (req, res) => {
                     event.name = fields.name;
                     event.description = fields.description;
                     event.year = parseInt(fields.year);
+                    event.url = fields.url;
                     event.image = result.secure_url;
                     event.save((err, result) => {
                         if (err) {
