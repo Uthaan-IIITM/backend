@@ -10,6 +10,7 @@ const eventSchema = new Schema({
   },
   description: { type: String, required: true },
   image: { type: String, required: true },
+  year: {type:Number, required: true}
 });
 
 const events = new model("event", eventSchema);
