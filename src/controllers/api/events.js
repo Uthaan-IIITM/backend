@@ -11,8 +11,7 @@ exports.addEvent = (req, res) => {
                     error: "Error uploading file",
                 });
             } else {
-
-                cloudinary.uploader.upload(file.image.path, (err, result) => {
+                cloudinary.uploader.upload(file.image.path, { folder: "events/" }, (err, result) => {
 
                     let event = new events();
                     event.name = fields.name;
@@ -21,6 +20,7 @@ exports.addEvent = (req, res) => {
                     event.save((err, result) => {
                         if (err) {
                             res.status(401);
+                            console.log(err);
                             return res.send({ message: "error adding the event" });
                         } else {
                             res.status(200);
