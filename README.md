@@ -1,42 +1,124 @@
-# Uthaan Website Backend
+<div id="top"></div>
 
-## Routes
-    1./api 
-        1.1 /api/shows 
-            GET - To fetch a show  
-                1.1.1 /api/shows?name=beMyGuest&season=1 
-                1.1.2 /api/shows?name=kyc&season=2 
-                1.1.3 /api/shows?name=turnTheTable&season=1 
-                ...
-            POST - To create a new show 
-                body : name,season,playlistId
+<div align="center">
+  <h1 align="center">Uthaan</h1>
+  <p align="center">
+    The backend repository of the official
+    <a href="https://www.uthaan.org/">
+    Uthaan website.
+  </a>
+  </p>
+</div>
 
-        1.2 /api/articles 
+<!-- FEATURES IMPLEMENTED -->
 
-        1.3 /api/interviews  
+## Features Implemented
 
-        1.4 /api/events 
-            GET = To fetch events
-            POST = To create events
-        
-        1.5 /api/images
-            GET = To get all the images
-            POST = To upload single or multiple images
-                body:formdata
-            DELETE = To delete ALL images in the database
+### 1. Auth Routes
 
-            1.5.1 /api/images/:imageId
-                DELETE = To delete the image with given imageId
-            
+- login
+  - Users can login by entering only the valid credentials
+  - Verification is done using JWT token
+- addAdmin
+  - Checks are added to make sure valid credentials have been input
+  - Only existing admins can add a new admin
 
+### 2. API Routes
 
-    2./auth
-        2.1 /auth/login 
-            Method = POST
-                body = {email,password}
-        2.2 /auth/addAdmin
-            Method = POST
-                body = {email,password}
-                remarks : Only an existing admin can add a new admin
+- Events
+  - addEvent
+    - Adds an event to the database
+  - getEvents
+    - Fetches all events from the database
+- Shows
+  - getShow
+    - Fetches a given show from the database
+  - addShow
+    - Adds a new show to the database
+- Articles
+  - getArticles
+    - Fetches details of all articles from the articles API
+- Interviews
+  - getInterviews
+    - Fetches details of all interviews from the interviews API
+- Images
+  - getImages
+    - Fetches all the images from the database
+  - uploadImage
+    - Uploads images to the gallery
+  - deleteAllImages
+    - Deletes all images stored in the database
+  - deleteImage
+    - Deletes a single image from the database
+- Team
+  - getTeams
+    - Fetches all the team members, sorted by their roles
+  - addTeamMember
+    - Adds a team member
+  - updateTeamMember
+    - Updates the information of a team member
+- Messages
+  - sendMessage
+    - Message can be sent to the club by entering contact details along with the message
+  - getMessages
+    - Fetches all the messages sent through the website
 
+<!-- BUILT WITH -->
 
+## Built With
+
+- Express.js
+- Node.js
+- MongoDB
+- Bcrypt
+- CORS
+- Cloudinary
+- Formidable
+- JWT
+- Babel
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+1. Fork the repository
+2. Clone the repository
+
+```sh
+git clone https://github.com/Uthaan-IIITM/uthaan-backend.git
+```
+
+3. Open the folder containing the cloned repository
+4. Install the required packages, libraries and dependencies
+
+```sh
+npm install
+```
+
+5. Custom API keys can be set up in a .env file
+6. Run the project locally to access the backend functionality of the website
+
+```sh
+nodemon start
+```
+
+<!--CONTRIBUTORS -->
+
+## Contributors
+
+<a href = "https://github.com/Uthaan-IIITM/uthaan-backend/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=Uthaan-IIITM/uthaan-backend"/>
+</a>
+
+<!-- CONNECT WITH US -->
+
+## Connect With Us
+
+<div>
+<a href="https://github.com/Uthaan-IIITM" target="blank"><img align="center" src="https://github.com/Uthaan-IIITM/Uthaan-Frontend/blob/main/src/assets/readme/github.svg" alt="uthaan" height="40" width="42" /></a>
+<a href="https://www.linkedin.com/company/uthaan-iiitm/" target="blank"><img align="center" src="https://github.com/Uthaan-IIITM/Uthaan-Frontend/blob/main/src/assets/readme/linkedin.svg" alt="uthaan" height="40" width="42" /></a>
+<a href="https://www.facebook.com/uthaaniiitmg/" target="blank"><img align="center" src="https://github.com/Uthaan-IIITM/Uthaan-Frontend/blob/main/src/assets/readme/fb.svg" alt="uthaan" height="40" width="42" /></a>
+<a href="https://medium.com/uthaan" target="blank"><img align="center" src="https://github.com/Uthaan-IIITM/Uthaan-Frontend/blob/main/src/assets/readme/medium.svg" alt="@uthaan" height="40" width="42" /></a>
+<a href="https://www.instagram.com/uthaaniiitm/" target="blank"><img align="center" src="https://github.com/Uthaan-IIITM/Uthaan-Frontend/blob/main/src/assets/readme/ig.svg" alt="uthaan" height="40" width="42" /></a>
+<a href="https://www.youtube.com/c/UthaanIIITM/" target="blank"><img align="center" src="https://github.com/Uthaan-IIITM/Uthaan-Frontend/blob/main/src/assets/readme/yt.svg" alt="uthaan" height="40" width="42" /></a>
+</div>
