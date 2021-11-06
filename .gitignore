@@ -1,2 +1,7 @@
 node_modules/
 .env
+server-cert.pem
+server-csr.pem
+server-key.pem
+
+package-lock.json
