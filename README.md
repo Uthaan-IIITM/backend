@@ -102,14 +102,6 @@ npm install
 nodemon start
 ```
 
-<!--CONTRIBUTORS -->
-
-## Contributors
-
-<a href = "https://github.com/Uthaan-IIITM/uthaan-backend/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=Uthaan-IIITM/uthaan-backend"/>
-</a>
-
 <!-- CONNECT WITH US -->
 
 ## Connect With Us
