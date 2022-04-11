@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "dev": "nodemon app.js",
     "type": "module",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

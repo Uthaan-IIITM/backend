@@ -1,14 +1,14 @@
 const cors = require("cors");
 const corsOptions = {
-    origin: "*",
-    optionSuccessStatus: 200,
+  origin: "*",
+  optionSuccessStatus: 200,
 };
 
 // initial code
 require("dotenv").config();
 const express = require("express");
-var https = require('https');
-var fs = require('fs');
+var https = require("https");
+var fs = require("fs");
 //Database connection
 const UthaanDB = require("./src/config/db.js");
 const cloudinary = require("./src/config/cloudinary.js");
@@ -19,12 +19,11 @@ const api = require("./src/routes/api");
 const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
-const port = 8080;
+const port = process.env.PORT || 8000;
 
 //Route to fetch data
 
 app.use("/api", api);
-
 
 //Route for admin auth actions
 app.use("/auth", auth);
@@ -36,5 +35,9 @@ app.use("/auth", auth);
 
 // httpsServer.listen(8080);
 app.listen(process.env.PORT || port, () => {
-    console.log(`Server running at port ${port}`);
+  console.log(`Server running at port ${port}`);
+});
+
+app.get("/", (req, res) => {
+  res.send("Server is up and running at port " + port);
 });
