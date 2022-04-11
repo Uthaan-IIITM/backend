@@ -14,5 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: yarn install
-      - run: npx pm2 restart all
+      - run: npm i
+      - run: npx pm2 delete all
+      - run: npx pm2 start npm -- start
