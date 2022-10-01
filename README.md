@@ -77,30 +77,8 @@
 - JWT
 - Babel
 
-<!-- GETTING STARTED -->
 
-## Getting Started
-
-1. Fork the repository
-2. Clone the repository
-
-```sh
-git clone https://github.com/Uthaan-IIITM/uthaan-backend.git
-```
-
-3. Open the folder containing the cloned repository
-4. Install the required packages, libraries and dependencies
-
-```sh
-npm install
-```
-
-5. Custom API keys can be set up in a .env file
-6. Run the project locally to access the backend functionality of the website
-
-```sh
-nodemon start
-```
+*If you want to contribute into this project, go through our [contributing guide](CONTRIBUTING.md)*
 
 <!-- CONNECT WITH US -->
 
