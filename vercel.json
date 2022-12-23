@@ -1,5 +1,6 @@
 {
-  "version": 1,
+  "version": 2,
+  "name": "uthaan-backend",
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "app.js" }],
+  "routes": [{ "src": "/(.*)", "dest": "app.js" }]
 }
