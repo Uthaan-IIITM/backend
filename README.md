@@ -4,7 +4,7 @@
   <h1 align="center">Uthaan</h1>
   <p align="center">
     The backend repository of the official
-    <a href="https://www.uthaan.org/">
+    <a href="https://uthaan.netlify.app/">
     Uthaan website.
   </a>
   </p>
